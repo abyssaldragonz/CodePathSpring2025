@@ -1,3 +1,5 @@
+# Week 3 Session 2 Standard Problem Set Version 1
+
 # Problem Three
 # Visit booths which have a specific number of points available
 # Use a stack

@@ -54,14 +54,16 @@ h1 {
     font-size: xxx-large;
     font-weight: bolder;
     background-color: #8F592C;
+    padding: 5rem;
+    text-align: center;
 }
 
 h2 {
-
+  color: rgb(66, 23, 106);
 }
 
 h3 {
-
+  color: #231942;
 }
 
 h4 {
@@ -69,7 +71,7 @@ h4 {
 }
 
 p {
-
+  color: #32150D;
 }
 
 a,
@@ -112,7 +114,7 @@ button:hover {
 
 .header {
     /* Example A: This styles elements with class="header" */
-
+    color: black;
 }
 
 /*** footer ***
@@ -127,7 +129,6 @@ button:hover {
 
 .footer {
     /* Example B: This styles elements with class="footer" */
-    position: sticky;
     padding: 0.5rem;
     color: #8F592C;
     background-color: #451D0F;
@@ -147,6 +148,11 @@ button:hover {
   - [ ] Project 4 (STRETCH FEATURE) 
   - [ ] Any time after
 ***/
+.warning {
+  color: red;
+  text-decoration: underline;
+  font-weight: bold;
+}
 
 
 /*** Schedule Section ***

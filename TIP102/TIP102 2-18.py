@@ -1,4 +1,4 @@
-#STANDARD PROBLEM SET ONE
+# Week 1 Session 1 Standard Problem Set Version 1
 
 #PROBLEM TWO
 def greeting(name):
