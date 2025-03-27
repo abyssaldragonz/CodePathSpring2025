@@ -1,4 +1,4 @@
-<!-- working locally on vscode and pushing to github ! -->
+<!-- working locally on vscode and pushing to github (https://github.com/abyssaldragonz/CodePathSpring2025) ! -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,18 +11,19 @@
         - Link to the CSS file (used to style the webpage)
 
         When To Modify:
-        - [ ] Project 2 (REQUIRED FEATURE) 
-        - [ ] Project 2 (STRETCH FEATURE) (favicon)
+        - [X] Project 2 (REQUIRED FEATURE) 
+        - [X] Project 2 (STRETCH FEATURE) (favicon)
         - [ ] Any time after
         -->
         <title>Dungeon Runners</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="https://static.wikia.nocookie.net/hypixel-skyblock/images/4/4c/Dungeon_Orb.png/revision/latest?cb=20200726074349" type="image/x-icon">
     </head>
     
     <body>
     
         <!-- navbar [PLACEHOLDER] [ADDED IN UNIT 4] -->
-
+        
         <!-- headings
 
         Purpose:
@@ -30,17 +31,21 @@
         - Contains the title, subtitle, image, and key buttons for the webpage
 
         When To Modify:
-        - [ ] Project 2 (REQUIRED FEATURE) 
-        - [ ] Project 3 (REQUIRED FEATURE) 
-        - [ ] Project 4 (REQUIRED FEATURE) 
+        - [X] Project 2 (REQUIRED FEATURE) 
+        - [X] Project 3 (REQUIRED FEATURE) 
+        - [X] Project 4 (REQUIRED FEATURE) 
         - [ ] Any time after
         -->
-        <div>
-            <img id="header-img" src="./img/logo500.png"/>
-            <h1 style="border-radius: 1rem;">Dungeon Runners</h1>
-            <h2>Run. Fight. Survive.</h2>
-            <button type="button">Join the Battle!</button>
-            <button type="button">Notice Board</button>
+        <div class="header">
+            <img id="header-img" src="https://wiki.hypixel.net/images/6/66/SkyBlock_items_dungeoneering.png"/>
+            <h1 style="border-radius: 1rem; ">Dungeon Runners</h1>
+            <div>
+                <h2 style="margin-top: 0px;">Run. Fight. Survive!</h2>
+                <div>
+                    <button type="button">Join the Battle!</button>
+                    <button type="button">Notice Board</button>
+                </div>
+            </div>
         </div>
         
         <!-- about
@@ -50,9 +55,9 @@
         - Contains a video, description, and key points about the event
 
         When To Modify:
-        - [ ] Project 2 (REQUIRED FEATURE) 
-        - [ ] Project 2 (STRETCH FEATURE) 
-        - [ ] Project 4 (STRETCH FEATURE) 
+        - [X] Project 2 (REQUIRED FEATURE) 
+        - [X] Project 2 (STRETCH FEATURE) 
+        - [X] Project 4 (STRETCH FEATURE) 
         - [ ] Any time between / after
         --> 
         <h2>About the Event</h2>
@@ -61,13 +66,36 @@
         <h3>What to Expect</h3>
         <h4>Many battles. . . many deaths. . .</h4>
         <ul>
-            <li> <b>Level 0-5 Dungeons:</b> <i>Beginner dungeons</i></li>
-            <li> <b>Level 5-25 Dungeons:</b> <i>Amateur dungeons</i></li>
-            <li> <b>Level 25-50 Dungeons:</b> <i>Intermediate dungeons</i></li>
-            <li> <b>Level 50-75 Dungeons:</b> <i>Advanced dungeons</i></li>
-            <li> <b>Level 100+ Dungeons:</b> <i>Expert dungeons <span class="warning">*WARNING: MANY DANGERS AHEAD*</span> </i></li>
+            <li class="listItem">
+                <b>Level 0-5 Dungeons:</b> <i>Beginner dungeons</i>
+                <img height="100" src="https://wiki.hypixel.net/images/b/b9/SkyBlock_furniture_dungeon_wood_reward_chest.png" />
+            </li>
+                <hr />
+                
+            <li  class="listItem"> 
+                <b>Level 5-25 Dungeons:</b> <i>Amateur dungeons</i>
+                <img height="100" src="https://wiki.hypixel.net/images/8/85/SkyBlock_furniture_dungeon_gold_reward_chest.png" />
+            </li>
+                <hr />
+            <li  class="listItem"> 
+                <b>Level 25-50 Dungeons:</b> <i>Intermediate dungeons</i>
+                <img height="100" src="https://wiki.hypixel.net/images/9/98/SkyBlock_furniture_dungeon_diamond_reward_chest.png" />
+            </li>
+                <hr />
+            <li  class="listItem"> 
+                <b>Level 50-75 Dungeons:</b> <i>Advanced dungeons</i>
+                <img height="100" src="https://wiki.hypixel.net/images/e/e4/SkyBlock_furniture_dungeon_emerald_reward_chest.png" />
+            </li>
+                <hr />
+            <li  class="listItem"> 
+                <b>Level 100+ Dungeons:</b> <i>Expert dungeons <span class="warning">*WARNING: MANY DANGERS AHEAD*</span> </i>
+                <img height="100" src="https://wiki.hypixel.net/images/4/40/SkyBlock_furniture_dungeon_obsidian_reward_chest.png" />
+                <img height="100" src="https://wiki.hypixel.net/images/8/87/SkyBlock_furniture_dungeon_bedrock_reward_chest.png" />
+            </li>
         </ul>
 
+        <iframe src="https://www.youtube.com/embed/WL8_PJTOK1I" title="Hypixel Skyblock: Anime Opening Remastered" allowfullscreen> </iframe>
+        
         <!-- schedule
 
         Purpose:
@@ -75,23 +103,45 @@
         - Contains images and descriptions of each activity
 
         When To Modify:
-        - [ ] Project 2 (REQUIRED FEATURE) 
-        - [ ] Project 4 (STRETCH FEATURE) 
+        - [X] Project 2 (REQUIRED FEATURE) 
+        - [X] Project 4 (STRETCH FEATURE) 
         - [ ] Any time between / after
         --> 
         <h2>Event Schedule</h2>
 
-        <img alt="" src="./img/placeholder.png"/>
-        <h3>Event Activity 1</h3>
-        <p>Description of event activity.</p>
+        <h3>The Catacombs.</h4>
+        <img alt="Watcher" height="100" src="https://wiki.hypixel.net/images/8/86/SkyBlock_items_the_watchers_head.png" />
+        <h3>Entrance: The Watcher</h3>
+        <p><span class="warning">LEVEL 5</span> This strange creature is roaming the Catacombs to add powerful adventurers to its collection.</p>
+            <hr />
+        <img alt="Bonzo" height="100" src="https://wiki.hypixel.net/images/d/d4/SkyBlock_entities_bonzo_2.png"/>
+        <h3>Floor I: Bonzo</h3>
+        <p><span class="warning">LEVEL 15</span> Involved in his dark arts due to his parents' insistence. Originally worked as a Circus clown.</p>
+            <hr />
+        <img alt="Scarf" height="100" src="https://wiki.hypixel.net/images/a/a0/SkyBlock_entities_scarf.png"/>
+        <h3>Floor II: Scarf</h3>
+        <p><span class="warning">LEVEL 25</span> First of his class. His teacher said he will do "great things".</p>
+            <hr />
+        <img alt="Professor" height="100" src="https://wiki.hypixel.net/images/9/99/SkyBlock_npcs_professor.png"/>
+        <h3>Floor III: The Professor</h3>
+        <p><span class="warning">LEVEL 30</span> Despite his great technique, he failed the Masters exam three times. Works from 8 to 5. Cares about his students.</p>
+            <hr />
+        <img alt="Thorn" height="100" src="https://wiki.hypixel.net/images/4/4f/Minecraft_entities_ghast.gif" />
+        <h3>Floor IV: Thorn</h3>
+        <p><span class="warning">LEVEL 50</span> Powerful Necromancer that specializes in animals. Calls himself a vegetarian, go figure.</p>
+            <hr />
+        <img alt="Livid" height="100" src="https://wiki.hypixel.net/images/3/34/SkyBlock_npcs_livid.png" />
+        <h3>Floor V: Livid</h3>
+        <p><span class="warning">LEVEL 65</span> Strongly believes he will become the Lord one day. Subject of the mockeries, even from his disciples.</p>
+            <hr />
+        <img alt="Sadan" height="100" src="https://wiki.hypixel.net/images/1/17/SkyBlock_npcs_sadan.png" />
+        <h3>Floor VI: Sadan</h3>
+        <p><span class="warning">LEVEL 80</span> Necromancy was always strong in his family. Says he once beat a Wither in a duel. Likes to brag.</p>
+            <hr />
+        <img alt="Wither King" height="100" src="https://wiki.hypixel.net/images/a/a4/Minecraft_entities_wither.png" />
+        <h3>Floor VII: The Wither King</h3>
+        <p><span class="warning">LEVEL 150</span> Disciples of the Wither King. Inherited the Catacombs eons ago. Never defeated, feared by anything living AND dead.</p>
             
-        <img alt="Image description" src="./img/example.png"/>
-        <h3>Event Activity 2</h3>
-        <p>Description of event activity.</p>
-
-        <img alt="Image description" src="./img/example.png"/>
-        <h3>Event Activity 2</h3>
-        <p>Description of event activity.</p>
 
         <!-- rsvp [PLACEHOLDER] [ADDED IN UNIT 6] -->
         <!-- success modal [PLACEHOLDER] [ADDED IN UNIT 9] --> 
@@ -102,25 +152,42 @@
         - Links to other resources related to the event
 
         When To Modify:
-        - [ ] Project 2 (STRETCH FEATURE) 
-        - [ ] Project 4 (STRETCH FEATURE) 
+        - [X] Project 2 (STRETCH FEATURE) 
+        - [X] Project 4 (STRETCH FEATURE) 
         - [ ] Any time between / after
         --> 
         <h2>Links</h2>
 
         <!-- This <a> block is one link.  Copy and paste all 6 lines to create another link. -->
-        <a class="block" href="https://www.codepath.org">
+        <a class="block" href="https://wiki.hypixel.net/Dungeon">
             <article>
-                <h3>Link title</h3>
-                <p>Link description</p>
+                <h3>Skyblock Dungeons</h3>
+                <p>Want to dungeon in Minecraft? Visit Hypixel Skyblock's Dungeons</p>
+            </article>
+        </a>
+            <hr />
+        <a class="block" href="https://www.dndbeyond.com/">
+            <article>
+                <h3>Dungeons and Dragons</h3>
+                <p>Prefer tabletop dungeons? Look no further than DND</p>
+            </article>
+        </a>
+            <hr />
+        <a class="block" href="https://baldursgate3.game/">
+            <article>
+                <h3>Baldur's Gate III</h3>
+                <p>Enjoy dark soul games? Baldur's Gate is the perfect match</p>
             </article>
         </a>
             
-        <!-- footer [PLACEHOLDER] [ADDED IN UNIT 3] -->
+        <!-- footer -->
         <footer class="footer">
-            put together by your friendly neighborhood dungeon keeper
+            put together by your friendly neighborhood dungeon keeper ⊹₊⟡⋆
+            <a style="color: #00000000;" href="https://github.com/abyssaldragonz">GITHUB</a> ⋆｡°✩
+            <a style="color: #00000000;" href="https://www.linkedin.com/in/josephine-b-l/">LINKEDIN</a> *ੈ✩‧₊˚
         </footer>
         <!-- script [PLACEHOLDER] [ADDED IN UNIT 5] -->
 
+        <div id="header-img"></div>
     </body>
 </html>

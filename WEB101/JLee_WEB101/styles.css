@@ -19,7 +19,7 @@ html {
     - (Tip: You can always override these rules later in the stylesheet)
 
   When To Modify:
-  - [ ] Project 3 (REQUIRED FEATURE) 
+  - [X] Project 3 (REQUIRED FEATURE) 
   - [ ] Any time after
 ***/
 
@@ -54,11 +54,13 @@ h1 {
     font-size: xxx-large;
     font-weight: bolder;
     background-color: #8F592C;
+    border: solid .25rem #32150D;
     padding: 5rem;
     text-align: center;
 }
 
 h2 {
+  margin-top: 5rem;
   color: rgb(66, 23, 106);
 }
 
@@ -67,7 +69,7 @@ h3 {
 }
 
 h4 {
-
+  color: blueviolet;
 }
 
 p {
@@ -76,29 +78,39 @@ p {
 
 a,
 a * {
-
+  text-shadow: 2px 2px turquoise;
+  text-decoration: underline;
 }
 
 button {
     /* Example Style, replace with your own! */
-    background-color: #8F592C;
-    /* button color */
-    color: #32150D;
-    /* text color */
-    border: none;
-    /* hides the default border */
-    padding: 5px 12px;
-    /* space between button's text and edge */
-    border-radius: 5px;
-    /* curved edges instead of square */
-    cursor: pointer;
-    /* makes the cursor change when over button */
+    background-color: #8F592C;     /* button color */
+    color: #32150D;     /* text color */
+    border: none;     /* hides the default border */
+    padding: 5px 12px;     /* space between button's text and edge */
+    border-radius: 5px;     /* curved edges instead of square */
+    cursor: pointer;     /* makes the cursor change when over button */
+    width: fit-content;
+    font-family: "Minecraft";
+    font-size: larger;
 }
 
 button:hover {
     /* Make the button look different when the user hovers over it */
     background-color: #451D0F;
     color: #8F592C;
+}
+
+.listItem {
+  padding: 2rem;
+  min-width: fit-content;
+  border: double 1rem black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.5rem;
+  background-color: silver;
 }
 
 /*** header ***
@@ -108,13 +120,24 @@ button:hover {
 
   When To Modify:
   - [X] Project 3 (REQUIRED FEATURE) 
-  - [ ] Project 4 (REQUIRED FEATURE) 
+  - [X] Project 4 (REQUIRED FEATURE) 
   - [ ] Any time after
 ***/
 
 .header {
     /* Example A: This styles elements with class="header" */
     color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+#header-img {
+  width: 100px;
+  height: 100px;
 }
 
 /*** footer ***
@@ -123,7 +146,7 @@ button:hover {
   - Add style rules for your website's footer section
 
   When To Modify:
-  - [ ] Project 3 (STRETCH FEATURE) 
+  - [X] Project 3 (STRETCH FEATURE) 
   - [ ] Any time after
 ***/
 
@@ -134,6 +157,8 @@ button:hover {
     background-color: #451D0F;
     bottom: 0;
     width: 100%;
+    position: fixed;
+    margin-left: -50px; /* To ignore the body's marign and make it stuck in a fixed position */
 }
 
 /*** Navbar [PLACEHOLDER] [ADDED IN UNIT 4] ***/
@@ -144,12 +169,12 @@ button:hover {
   - Add style rules for your website's About section
 
   When To Modify:
-  - [ ] Project 3 (OPTIONAL)
-  - [ ] Project 4 (STRETCH FEATURE) 
+  - [X] Project 3 (OPTIONAL)
+  - [X] Project 4 (STRETCH FEATURE) 
   - [ ] Any time after
 ***/
 .warning {
-  color: red;
+  color:crimson;
   text-decoration: underline;
   font-weight: bold;
 }
@@ -161,8 +186,8 @@ button:hover {
   - Add style rules for your website's Schedule section
 
   When To Modify:
-  - [ ] Project 3 (OPTIONAL)
-  - [ ] Project 4 (STRETCH FEATURE) 
+  - [X] Project 3 (OPTIONAL)
+  - [X] Project 4 (STRETCH FEATURE) 
   - [ ] Any time after
 ***/
 
@@ -173,8 +198,8 @@ button:hover {
   - Add style rules for your website's Links section
 
   When To Modify:
-  - [ ] Project 3 (OPTIONAL)
-  - [ ] Project 4 (STRETCH FEATURE) 
+  - [X] Project 3 (OPTIONAL)
+  - [X] Project 4 (STRETCH FEATURE) 
   - [ ] Any time after
 ***/
 
