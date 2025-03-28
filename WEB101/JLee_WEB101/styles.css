@@ -101,7 +101,7 @@ button:hover {
     color: #8F592C;
 }
 
-.listItem {
+.listItem-container {
   padding: 2rem;
   min-width: fit-content;
   border: double 1rem black;
@@ -124,8 +124,9 @@ button:hover {
   - [ ] Any time after
 ***/
 
-.header {
+.header-container {
     /* Example A: This styles elements with class="header" */
+    margin-top: 5rem;
     color: black;
     display: flex;
     flex-direction: row;
@@ -162,6 +163,45 @@ button:hover {
 }
 
 /*** Navbar [PLACEHOLDER] [ADDED IN UNIT 4] ***/
+/*** Navigation bar (navbar) ***
+  
+  Purpose:
+  - Add style rules for your website's navbar
+
+  When To Modify:
+  - [X] Project 4 (REQUIRED FEATURE) 
+  - [ ] Any time after
+***/
+
+.navbar ul {
+  top: 0;
+  left: 0;
+  z-index: 1000;  /* Ensures the navbar is on top of other elements */
+  position: absolute;
+  background-color: #684fb5;
+  padding: 1rem;
+  width: 100%;
+  list-style-type: none;
+  overflow: hidden;
+  margin-bottom: 5rem;
+}
+
+.navbar ul li {
+  float: left;
+  margin: 10px;
+}
+
+.navbar ul li a {
+  display: block;
+  text-decoration: none;
+  color: turquoise;
+  text-shadow: none;
+}
+
+.navbar ul li a:hover {
+  color: white;
+  text-decoration: underline;
+}
 
 /*** About Section ***
   

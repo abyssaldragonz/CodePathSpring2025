@@ -21,8 +21,28 @@
     </head>
     
     <body>
-    
+        <!-- <p style="font-size: x-large; text-shadow: 2px 2px black" class="warning">***Author’s Note: With the images and the stretch embedded video, they will NOT work on the VSCode EDU project because it is local based and the media requires to be connected online. Please visit <a href="https://abyssaldragonz.github.io/CodePathSpring2025/WEB101/JLee_WEB101/">https://abyssaldragonz.github.io/CodePathSpring2025/WEB101/JLee_WEB101/</a> for those aspects of the project !!!!!</p> -->
+
         <!-- navbar [PLACEHOLDER] [ADDED IN UNIT 4] -->
+        <!-- navbar
+        
+        Purpose:
+        - Navigation bar that allows users to jump to different sections of the webpage
+        - Also holds buttons for user settings (dark mode, reduce motion)
+        
+        When To Modify:
+        - [X] Project 4 (REQUIRED FEATURE)
+        - [X] Project 5 (REQUIRED FEATURE) 
+        - [ ] Project 8 (STRETCH FEATURE) 
+        - [ ] Any time between / after
+        -->
+        <div class="navbar">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#links">Links</a></li>
+            </ul>
+        </div>
         
         <!-- headings
 
@@ -36,7 +56,7 @@
         - [X] Project 4 (REQUIRED FEATURE) 
         - [ ] Any time after
         -->
-        <div class="header">
+        <div class="header-container">
             <img id="header-img" src="https://wiki.hypixel.net/images/6/66/SkyBlock_items_dungeoneering.png"/>
             <h1 style="border-radius: 1rem; ">Dungeon Runners</h1>
             <div>
@@ -60,41 +80,43 @@
         - [X] Project 4 (STRETCH FEATURE) 
         - [ ] Any time between / after
         --> 
-        <h2>About the Event</h2>
+        <h2 id="about">About the Event</h2>
         <p>Missing a party to run dungeons with? Want to host dungeon raid events? Join in with other dungeon masters and good luck on your adventures!</p>
 
         <h3>What to Expect</h3>
         <h4>Many battles. . . many deaths. . .</h4>
         <ul>
-            <li class="listItem">
+            <li class="listItem-container">
                 <b>Level 0-5 Dungeons:</b> <i>Beginner dungeons</i>
                 <img height="100" src="https://wiki.hypixel.net/images/b/b9/SkyBlock_furniture_dungeon_wood_reward_chest.png" />
             </li>
                 <hr />
                 
-            <li  class="listItem"> 
+            <li  class="listItem-container"> 
                 <b>Level 5-25 Dungeons:</b> <i>Amateur dungeons</i>
                 <img height="100" src="https://wiki.hypixel.net/images/8/85/SkyBlock_furniture_dungeon_gold_reward_chest.png" />
             </li>
                 <hr />
-            <li  class="listItem"> 
+            <li  class="listItem-container"> 
                 <b>Level 25-50 Dungeons:</b> <i>Intermediate dungeons</i>
                 <img height="100" src="https://wiki.hypixel.net/images/9/98/SkyBlock_furniture_dungeon_diamond_reward_chest.png" />
             </li>
                 <hr />
-            <li  class="listItem"> 
+            <li  class="listItem-container"> 
                 <b>Level 50-75 Dungeons:</b> <i>Advanced dungeons</i>
                 <img height="100" src="https://wiki.hypixel.net/images/e/e4/SkyBlock_furniture_dungeon_emerald_reward_chest.png" />
             </li>
                 <hr />
-            <li  class="listItem"> 
+            <li  class="listItem-container"> 
                 <b>Level 100+ Dungeons:</b> <i>Expert dungeons <span class="warning">*WARNING: MANY DANGERS AHEAD*</span> </i>
                 <img height="100" src="https://wiki.hypixel.net/images/4/40/SkyBlock_furniture_dungeon_obsidian_reward_chest.png" />
                 <img height="100" src="https://wiki.hypixel.net/images/8/87/SkyBlock_furniture_dungeon_bedrock_reward_chest.png" />
             </li>
         </ul>
-
-        <iframe src="https://www.youtube.com/embed/WL8_PJTOK1I" title="Hypixel Skyblock: Anime Opening Remastered" allowfullscreen> </iframe>
+        
+        <br /> 
+        <p> Want to learn more? View a trailer here!</p>
+        <iframe src="https://www.youtube.com/embed/WL8_PJTOK1I" title="Hypixel Skyblock: Anime Opening Remastered" allowfullscreen> </iframe> <!-- this embed will NOT work in local !!!!  -->
         
         <!-- schedule
 
@@ -107,7 +129,7 @@
         - [X] Project 4 (STRETCH FEATURE) 
         - [ ] Any time between / after
         --> 
-        <h2>Event Schedule</h2>
+        <h2 id="schedule">Event Schedule</h2>
 
         <h3>The Catacombs.</h4>
         <img alt="Watcher" height="100" src="https://wiki.hypixel.net/images/8/86/SkyBlock_items_the_watchers_head.png" />
@@ -156,7 +178,7 @@
         - [X] Project 4 (STRETCH FEATURE) 
         - [ ] Any time between / after
         --> 
-        <h2>Links</h2>
+        <h2 id="links">Links</h2>
 
         <!-- This <a> block is one link.  Copy and paste all 6 lines to create another link. -->
         <a class="block" href="https://wiki.hypixel.net/Dungeon">
@@ -186,6 +208,8 @@
             <a style="color: #00000000;" href="https://github.com/abyssaldragonz">GITHUB</a> ⋆｡°✩
             <a style="color: #00000000;" href="https://www.linkedin.com/in/josephine-b-l/">LINKEDIN</a> *ੈ✩‧₊˚
         </footer>
+
+
         <!-- script [PLACEHOLDER] [ADDED IN UNIT 5] -->
 
         <div id="header-img"></div>
