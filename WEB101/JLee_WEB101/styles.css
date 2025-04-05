@@ -20,7 +20,7 @@ html {
 
   When To Modify:
   - [X] Project 3 (REQUIRED FEATURE) 
-  - [ ] Any time after
+  - [X] Any time after
 ***/
 
 body {
@@ -47,7 +47,7 @@ body {
 
   When To Modify:
   - [X] Project 3 (REQUIRED FEATURE) 
-  - [ ] Any time after
+  - [X] Any time after
 ***/
 
 h1 {
@@ -127,7 +127,7 @@ button:hover {
   When To Modify:
   - [X] Project 3 (REQUIRED FEATURE) 
   - [X] Project 4 (REQUIRED FEATURE) 
-  - [ ] Any time after
+  - [X] Any time after
 ***/
 
 .header-container {
@@ -154,7 +154,7 @@ button:hover {
 
   When To Modify:
   - [X] Project 3 (STRETCH FEATURE) 
-  - [ ] Any time after
+  - [X] Any time after
 ***/
 
 .footer {
@@ -176,7 +176,7 @@ button:hover {
 
   When To Modify:
   - [X] Project 4 (REQUIRED FEATURE) 
-  - [ ] Any time after
+  - [X] Any time after
 ***/
 
 .navbar ul {
@@ -219,7 +219,7 @@ button:hover {
   When To Modify:
   - [X] Project 3 (OPTIONAL)
   - [X] Project 4 (STRETCH FEATURE) 
-  - [ ] Any time after
+  - [X] Any time after
 ***/
 .warning {
   color:crimson;
@@ -236,7 +236,7 @@ button:hover {
   When To Modify:
   - [X] Project 3 (OPTIONAL)
   - [X] Project 4 (STRETCH FEATURE) 
-  - [ ] Any time after
+  - [X] Any time after
 ***/
 
 
@@ -248,7 +248,7 @@ button:hover {
   When To Modify:
   - [X] Project 3 (OPTIONAL)
   - [X] Project 4 (STRETCH FEATURE) 
-  - [ ] Any time after
+  - [X] Any time after
 ***/
 
 
@@ -266,7 +266,7 @@ button:hover {
 .rsvp-container {
   display: flex;
   flex-direction: row;
-  gap: 3rem;
+  gap: 5rem;
   width: 100%;
   padding-bottom: 5rem;
 }
@@ -294,6 +294,8 @@ button:hover {
   border-width: 2px;
 
   /* Set border-color and background */
+  border-color: var(--error-color-border);
+  background-color: var(--error-color);
 }
 
 /*** Animations [PLACEHOLDER] [ADDED IN UNIT 8] ***/
@@ -356,7 +358,7 @@ button:hover {
   - To reference a color variable in your css, use var(--variable-name) in place of a color value
 
   When To Modify:
-  - [ ] Any time (OPTIONAL)
+  - [X] Any time (OPTIONAL)
 ***/
 
 :root {

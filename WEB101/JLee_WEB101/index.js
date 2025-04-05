@@ -5,7 +5,7 @@
 
   When To Modify:
   - [X] Project 5 (REQUIRED FEATURE) 
-  - [ ] Any time after
+  - [X] Any time after
 ***/
 
 // Step 1: Select the theme button
@@ -31,9 +31,9 @@ themeButton.addEventListener("click", toggleDarkMode);
     entered should be added to the list of participants.
 
   When To Modify:
-  - [ ] Project 6 (REQUIRED FEATURE)
-  - [ ] Project 6 (STRETCH FEATURE) 
-  - [ ] Project 7 (REQUIRED FEATURE)
+  - [X] Project 6 (REQUIRED FEATURE)
+  - [X] Project 6 (STRETCH FEATURE) 
+  - [X] Project 7 (REQUIRED FEATURE)
   - [ ] Project 9 (REQUIRED FEATURE)
   - [ ] Any time between / after
 ***/
@@ -49,6 +49,7 @@ const addParticipant = (event) => {
     let user = document.getElementById("user").value;
     let classType = document.getElementById("class").value;
     let level = document.getElementById("level").value;
+    let contact = document.getElementById("contact").value;
 
     let participantsList = document.querySelector(".rsvp-participants");
 
@@ -72,7 +73,7 @@ const addParticipant = (event) => {
 }
 
 // Step 3: Add a click event listener to the submit RSVP button here
-submitButton.addEventListener("click", addParticipant);
+// submitButton.addEventListener("click", addParticipant);
 
 
 
@@ -82,8 +83,8 @@ submitButton.addEventListener("click", addParticipant);
   - Prevents invalid form submissions from being added to the list of participants.
 
   When To Modify:
-  - [ ] Project 7 (REQUIRED FEATURE)
-  - [ ] Project 7 (STRETCH FEATURE)
+  - [X] Project 7 (REQUIRED FEATURE)
+  - [X] Project 7 (STRETCH FEATURE)
   - [ ] Project 9 (REQUIRED FEATURE)
   - [ ] Any time between / after
 ***/
@@ -91,20 +92,44 @@ submitButton.addEventListener("click", addParticipant);
 // Step 1: We actually don't need to select the form button again -- we already did it in the RSVP code above.
 
 // Step 2: Write the callback function
-const validateForm = () => {
-
+const validateForm = (event) => {
   let containsErrors = false;
-
   var rsvpInputs = document.getElementById("rsvp-form").elements;
-  // TODO: Loop through all inputs
+  // Loop through all inputs
+  for (let i = 0; i < rsvpInputs.length; i++) {
+  // Inside loop, validate the value of each input
+    rsvpInputs[i].classList.remove("error");
 
-  // TODO: Inside loop, validate the value of each input
+    if (rsvpInputs[i].value.length == "") { // blank level
+      containsErrors = true;  
+      rsvpInputs[i].classList.add("error");
+    }
 
-  // TODO: If no errors, call addParticipant() and clear fields
+    else if (rsvpInputs[i].value.length < 2) // length of inputs is less than 2
+    {
+      containsErrors = true;  
+      rsvpInputs[i].classList.add("error");
+    }
 
+    else if (rsvpInputs[i].id == "contact") { // invalid email
+      if (!rsvpInputs[i].value.includes("@") || !rsvpInputs[i].value.includes(".net")) {
+        containsErrors = true;  
+        rsvpInputs[i].classList.add("error");
+      }
+    }
+  }
+  // If no errors, call addParticipant() and clear fields
+  if (containsErrors == false) {
+    addParticipant(event);
+    for (let i = 0; i < rsvpInputs.length; i++){
+      rsvpInputs[i].classList.remove("error");
+      rsvpInputs[i].value = "";
+    }
+  }
 }
 
 // Step 3: Replace the form button's event listener with a new one that calls validateForm()
+submitButton.addEventListener("click", validateForm);
 
 
 
