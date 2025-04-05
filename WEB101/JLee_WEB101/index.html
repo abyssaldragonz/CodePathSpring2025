@@ -21,7 +21,6 @@
     </head>
     
     <body>
-        <!-- navbar [PLACEHOLDER] [ADDED IN UNIT 4] -->
         <!-- navbar
         
         Purpose:
@@ -34,11 +33,12 @@
         - [ ] Project 8 (STRETCH FEATURE) 
         - [ ] Any time between / after
         -->
-        <div class="navbar">
+        <div class="navbar" id="navbar">
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#schedule">Schedule</a></li>
                 <li><a href="#links">Links</a></li>
+                <li><button id="theme-button">TOGGLE DARK MODE</button></li>
             </ul>
         </div>
         
@@ -83,7 +83,7 @@
 
         <h3>What to Expect</h3>
         <h4>Many battles. . . many deaths. . .</h4>
-        <ul>
+        <ul style="background: none;">
             <li class="listItem-container">
                 <b>Level 0-5 Dungeons:</b> <i>Beginner dungeons</i>
                 <img height="100" src="https://wiki.hypixel.net/images/b/b9/SkyBlock_furniture_dungeon_wood_reward_chest.png" />
@@ -163,7 +163,48 @@
         <p><span class="warning">LEVEL 150</span> Disciples of the Wither King. Inherited the Catacombs eons ago. Never defeated, feared by anything living AND dead.</p>
             
 
-        <!-- rsvp [PLACEHOLDER] [ADDED IN UNIT 6] -->
+        <!-- rsvp
+
+        Purpose:
+        - Section for users to sign up for the event
+        - Contains a form for users to input their information, 
+        and a list of other users who have signed up
+
+        When To Modify:
+        - [X] Project 6 (STRETCH FEATURE) 
+        - [ ] Any time after
+        -->
+        <div id="rsvp">
+            <h2>RSVP</h2>
+            <div class="rsvp-container">
+                <div class="rsvp-para">
+                    <!-- info goes here -->
+                    <p>The Catacombs are evolving, it's growing more dangerous, and soon we won't be able to contain it. Want to sign up for a dungeon run and join the efforts against the Wither King? Join the party below!</p> <br /> <br />
+                </div>
+                <div class="rsvp-participants">
+                    <p><img alt="Technoblade" height="35" src="https://cravatar.eu/helmhead/technoblade/600.png"> Technoblade (berserk) has joined the party!</p>
+                    <p><img alt="im_a_squid_kid" height="35" src="https://cravatar.eu/helmhead/im_a_squid_kid/600.png"> Squid Kid (mage) has joined the party!</p>
+                    <p><img alt="HaxR256" height="35" src="https://cravatar.eu/helmhead/HaxR256/600.png"> HaxR (tank) has joined the party!</p>
+                    <p><img alt="Powliner" height="35" src="https://cravatar.eu/helmhead/Powliner/600.png"> Powliner (healer) has joined the party!</p>
+                    <p><img alt="Jules" height="35" src="https://cravatar.eu/helmhead/Jules/600.png"> Jules (archer) has joined the party!</p>
+                </div>
+            </div>
+
+            <!--- Sign RSVP Form --->
+            <div class="form-container">
+                <form id="rsvp-form" title="rsvp-form">
+                    <!-- form inputs go here -->
+                    <label>Username:</label>
+                    <input id="user" placeholder="Enter your username">
+                    <label>Class:</label>
+                    <input id="class" placeholder="Enter your main class">
+                    <label>Level:</label>
+                    <input type="number" id="level" placeholder="Enter your level">
+                </form>
+                <!-- Submit button -->
+                <button id="rsvp-button">Submit RSVP</button>
+            </div>
+        </div>
         <!-- success modal [PLACEHOLDER] [ADDED IN UNIT 9] --> 
 
         <!-- links
@@ -202,13 +243,14 @@
             
         <!-- footer -->
         <footer class="footer">
-            put together by your friendly neighborhood dungeon keeper ⊹₊⟡⋆
+            mended together by your friendly neighborhood dungeon keeper ⊹₊⟡⋆
             <a style="color: #00000000;" href="https://github.com/abyssaldragonz">GITHUB</a> ⋆｡°✩
             <a style="color: #00000000;" href="https://www.linkedin.com/in/josephine-b-l/">LINKEDIN</a> *ੈ✩‧₊˚
         </footer>
 
 
         <!-- script [PLACEHOLDER] [ADDED IN UNIT 5] -->
+        <script src="index.js"></script>
 
         <div id="header-img"></div>
     </body>
