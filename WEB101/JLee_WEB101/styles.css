@@ -289,6 +289,13 @@ button:hover {
 }
 
 /* Add other rsvp-related selectors here */
+.error {
+  border-style: solid;
+  border-width: 2px;
+
+  /* Set border-color and background */
+}
+
 /*** Animations [PLACEHOLDER] [ADDED IN UNIT 8] ***/
 /*** Success Modal [PLACEHOLDER] [ADDED IN UNIT 9] ***/
 
