@@ -105,7 +105,7 @@ const validateForm = (event) => {
       rsvpInputs[i].classList.add("error");
     }
 
-    else if (rsvpInputs[i].value.length < 2) // length of inputs is less than 2
+    else if (rsvpInputs[i].id != "level" && rsvpInputs[i].value.length < 2) // length of inputs is less than 2
     {
       containsErrors = true;  
       rsvpInputs[i].classList.add("error");
