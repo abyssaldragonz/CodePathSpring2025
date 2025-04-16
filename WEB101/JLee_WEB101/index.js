@@ -34,27 +34,27 @@ themeButton.addEventListener("click", toggleDarkMode);
   - [X] Project 6 (REQUIRED FEATURE)
   - [X] Project 6 (STRETCH FEATURE) 
   - [X] Project 7 (REQUIRED FEATURE)
-  - [ ] Project 9 (REQUIRED FEATURE)
-  - [ ] Any time between / after
+  - [X] Project 9 (REQUIRED FEATURE)
+  - [X] Any time between / after
 ***/
 
 // Step 1: Add your query for the submit RSVP button here
 let submitButton = document.getElementById("rsvp-button");
 let count = 5;
 
-const addParticipant = (event) => {
+const addParticipant = (person, event) => {
     // Step 2: Write your code to manipulate the DOM here
     event.preventDefault();
 
-    let user = document.getElementById("user").value;
-    let classType = document.getElementById("class").value;
-    let level = document.getElementById("level").value;
-    let contact = document.getElementById("contact").value;
+    // let user = document.getElementById("user").value;
+    // let classType = document.getElementById("class").value;
+    // let level = document.getElementById("level").value;
+    // let contact = document.getElementById("contact").value;
 
     let participantsList = document.querySelector(".rsvp-participants");
 
     let newMember = document.createElement("p");
-    newMember.innerHTML = user + " (" + classType + ") has joined the party! ";
+    newMember.innerHTML = `${person.user} (${person.class}) has joined the party!`;
     participantsList.appendChild(newMember);
 
     // Suggested Solution !! Updates it below the participants list !!
@@ -85,14 +85,20 @@ const addParticipant = (event) => {
   When To Modify:
   - [X] Project 7 (REQUIRED FEATURE)
   - [X] Project 7 (STRETCH FEATURE)
-  - [ ] Project 9 (REQUIRED FEATURE)
-  - [ ] Any time between / after
+  - [X] Project 9 (REQUIRED FEATURE)
+  - [X] Any time between / after
 ***/
 
 // Step 1: We actually don't need to select the form button again -- we already did it in the RSVP code above.
 
 // Step 2: Write the callback function
 const validateForm = (event) => {
+  const person = {
+    "user": document.getElementById("user").value,
+    "class": document.getElementById("class").value,
+    "level": document.getElementById("level").value,
+    "contact": document.getElementById("contact").value
+  }
   let containsErrors = false;
   var rsvpInputs = document.getElementById("rsvp-form").elements;
   // Loop through all inputs
@@ -100,19 +106,19 @@ const validateForm = (event) => {
   // Inside loop, validate the value of each input
     rsvpInputs[i].classList.remove("error");
 
-    if (rsvpInputs[i].value.length == "") { // blank level
+    if (person.level.length == "") { // blank level
       containsErrors = true;  
       rsvpInputs[i].classList.add("error");
     }
 
-    else if (rsvpInputs[i].id != "level" && rsvpInputs[i].value.length < 2) // length of inputs is less than 2
+    else if (rsvpInputs[i].id != "level" && person.level.length < 2) // length of inputs is less than 2
     {
       containsErrors = true;  
       rsvpInputs[i].classList.add("error");
     }
 
     else if (rsvpInputs[i].id == "contact") { // invalid email
-      if (!rsvpInputs[i].value.includes("@") || !rsvpInputs[i].value.includes(".net")) {
+      if (!person.contact.includes("@") || !person.contact.includes(".net")) {
         containsErrors = true;  
         rsvpInputs[i].classList.add("error");
       }
@@ -120,7 +126,7 @@ const validateForm = (event) => {
   }
   // If no errors, call addParticipant() and clear fields
   if (containsErrors == false) {
-    addParticipant(event);
+    addParticipant(person, event);
     for (let i = 0; i < rsvpInputs.length; i++){
       rsvpInputs[i].classList.remove("error");
       rsvpInputs[i].value = "";
@@ -139,5 +145,29 @@ document.getElementById("joinBattle").onclick = function () {
 };
 
 
+/*** Modal ***
+  
+  Purpose:
+  - Use this starter code to add a pop-up modal to your website.
 
-/*** Success Modal [PLACEHOLDER] [ADDED IN UNIT 9] ***/
+  When To Modify:
+  - [ ] Project 9 (REQUIRED FEATURE)
+  - [ ] Project 9 (STRETCH FEATURE)
+  - [ ] Any time after
+***/
+
+const toggleModal = (person) => {
+    let modal = 0; // TODO
+    
+    // TODO: Update modal display to flex
+    
+
+    // TODO: Update modal text to personalized message
+
+
+    // Set modal timeout to 5 seconds
+    
+}
+
+// TODO: animation variables and animateImage() function
+

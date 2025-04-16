@@ -260,7 +260,7 @@ button:hover {
   When To Modify:
   - [X] Project 6 (REQUIRED FEATURE)
   - [X] Project 7 (REQUIRED FEATURE)
-  - [ ] Any time after
+  - [X] Any time after
 ***/
 
 .rsvp-container {
@@ -299,7 +299,63 @@ button:hover {
 }
 
 /*** Animations [PLACEHOLDER] [ADDED IN UNIT 8] ***/
-/*** Success Modal [PLACEHOLDER] [ADDED IN UNIT 9] ***/
+
+/*** Success Modal  ***
+  
+  Purpose:
+  - Add style rules to your website's pop-up modal, which appears
+    when a user successfully submits the RSVP form
+
+  When To Modify:
+  - [ ] Project 9 (REQUIRED FEATURE)
+  - [ ] Any time after
+***/
+
+.modal {
+  display: none;
+  /* modal should be hidden by default*/
+  position: fixed;
+  /* modal cannot move around the screen */
+  z-index: 2;
+  /* modal appears above other elements */
+
+  /* TODO: Make the modal fill the entire screen */
+  left: TODO;
+  top: TODO;
+  width: TODO;
+  height: TODO;
+
+  /* Add a semi-transparent background to shadow non-modal elements*/
+  background-color: rgba(0, 0, 0, 0.4);
+  /* 40% opacity black */
+
+  /* Flexbox settings for modal */
+  /* These won't apply until we update "display:" from "hidden" to "flex" in our JS */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-container {
+  /* Change modal size and spacing here */
+  padding: 50px;
+  width: 55%;
+
+  /* Customize modal style here */
+  background-color: lightsteelblue;
+  color: black;
+  text-align: center;
+  font-size: 1rem;
+  font-family: monospace;
+
+  /* Optional: Use flexbox to customize .modal-item layout */
+  display: flex;
+
+}
+
+.modal-item {
+  /* Optional: Style individual elements within the modal */
+}
 
 
 /* Default dark mode style */
