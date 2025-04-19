@@ -307,23 +307,22 @@ button:hover {
     when a user successfully submits the RSVP form
 
   When To Modify:
-  - [ ] Project 9 (REQUIRED FEATURE)
-  - [ ] Any time after
+  - [X] Project 9 (REQUIRED FEATURE)
+  - [X] Any time after
 ***/
 
 .modal {
-  display: none;
+  display: flex;
   /* modal should be hidden by default*/
   position: fixed;
   /* modal cannot move around the screen */
-  z-index: 2;
+  z-index: 10000;
   /* modal appears above other elements */
 
-  /* TODO: Make the modal fill the entire screen */
-  left: TODO;
-  top: TODO;
-  width: TODO;
-  height: TODO;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 
   /* Add a semi-transparent background to shadow non-modal elements*/
   background-color: rgba(0, 0, 0, 0.4);
@@ -340,21 +339,24 @@ button:hover {
   /* Change modal size and spacing here */
   padding: 50px;
   width: 55%;
+  height: 55%;
 
   /* Customize modal style here */
   background-color: lightsteelblue;
   color: black;
   text-align: center;
-  font-size: 1rem;
+  font-size: 2rem;
   font-family: monospace;
 
   /* Optional: Use flexbox to customize .modal-item layout */
   display: flex;
+  justify-content: space-evenly;
 
 }
 
 .modal-item {
   /* Optional: Style individual elements within the modal */
+  height: 75%;
 }
 
 

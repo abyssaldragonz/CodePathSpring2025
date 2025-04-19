@@ -54,7 +54,7 @@ const addParticipant = (person, event) => {
     let participantsList = document.querySelector(".rsvp-participants");
 
     let newMember = document.createElement("p");
-    newMember.innerHTML = `${person.user} (${person.class}) has joined the party!`;
+    newMember.innerHTML = `${person.user.value} (${person.class.value}) has joined the party!`;
     participantsList.appendChild(newMember);
 
     // Suggested Solution !! Updates it below the participants list !!
@@ -94,10 +94,10 @@ const addParticipant = (person, event) => {
 // Step 2: Write the callback function
 const validateForm = (event) => {
   const person = {
-    "user": document.getElementById("user").value,
-    "class": document.getElementById("class").value,
-    "level": document.getElementById("level").value,
-    "contact": document.getElementById("contact").value
+    "user": document.getElementById("user"),
+    "class": document.getElementById("class"),
+    "level": document.getElementById("level"),
+    "contact": document.getElementById("contact")
   }
   let containsErrors = false;
   var rsvpInputs = document.getElementById("rsvp-form").elements;
@@ -106,24 +106,22 @@ const validateForm = (event) => {
   // Inside loop, validate the value of each input
     rsvpInputs[i].classList.remove("error");
 
-    if (person.level.length == "") { // blank level
-      containsErrors = true;  
-      rsvpInputs[i].classList.add("error");
-    }
-
-    else if (rsvpInputs[i].id != "level" && person.level.length < 2) // length of inputs is less than 2
+    if (rsvpInputs[i].id != "level" && rsvpInputs[i].value.length < 2) // length of inputs is less than 2
     {
       containsErrors = true;  
       rsvpInputs[i].classList.add("error");
     }
-
-    else if (rsvpInputs[i].id == "contact") { // invalid email
-      if (!person.contact.includes("@") || !person.contact.includes(".net")) {
-        containsErrors = true;  
-        rsvpInputs[i].classList.add("error");
-      }
-    }
   }
+  if (person.level.value.length == "") { // blank level
+    containsErrors = true;  
+    person.level.classList.add("error");
+  }
+
+  if (!person.contact.value.includes("@") || !person.contact.value.includes(".net")) { // invalid email
+    containsErrors = true;  
+    person.contact.classList.add("error");
+  }
+
   // If no errors, call addParticipant() and clear fields
   if (containsErrors == false) {
     addParticipant(person, event);
@@ -151,9 +149,9 @@ document.getElementById("joinBattle").onclick = function () {
   - Use this starter code to add a pop-up modal to your website.
 
   When To Modify:
-  - [ ] Project 9 (REQUIRED FEATURE)
-  - [ ] Project 9 (STRETCH FEATURE)
-  - [ ] Any time after
+  - [X] Project 9 (REQUIRED FEATURE)
+  - [X] Project 9 (STRETCH FEATURE)
+  - [X] Any time after
 ***/
 
 const toggleModal = (person) => {
