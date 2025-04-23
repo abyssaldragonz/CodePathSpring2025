@@ -178,12 +178,14 @@ const toggleMotion = () => {
     if (!reduceMotion){
         motionButton.style.backgroundColor = "#451D0F";
         motionButton.style.color = "#8F592C";
+		motionButton.innerText = "REDUCE MOTION: ON"
         headerImage.style.animation = `none`;
         navImage.style.animation = `none`;
     }
     else {
         motionButton.style.backgroundColor = "#8F592C";
         motionButton.style.color = "#451D0F";
+		motionButton.innerText = "REDUCE MOTION: OFF"
         headerImage.style.animation = `myAnim 2s steps(1, end) 0s infinite normal forwards`;
         navImage.style.animation = `myAnim 2s steps(2, end) 0s infinite reverse forwards`;
     }
@@ -228,13 +230,11 @@ const toggleModal = (person) => {
 // Animation variables and animateImage() function
 let rotateFactor = 10;
 let modalImage = document.getElementById("modal-image");
-
 const animateImage = (imageElement = modalImage) => {
 	if (rotateFactor == 10) {
 		rotateFactor = -10;
 	} else {
 		rotateFactor = 10;
 	}
-
     imageElement.style.transform = `rotate(${rotateFactor}deg)`;
 };
