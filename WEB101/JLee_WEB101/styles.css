@@ -312,7 +312,7 @@ button:hover {
 ***/
 
 .modal {
-  display: flex;
+  display: none;
   /* modal should be hidden by default*/
   position: fixed;
   /* modal cannot move around the screen */
@@ -351,12 +351,17 @@ button:hover {
   /* Optional: Use flexbox to customize .modal-item layout */
   display: flex;
   justify-content: space-evenly;
-
+  align-items: center;
 }
 
 .modal-item {
   /* Optional: Style individual elements within the modal */
-  height: 75%;
+  display: block;
+}
+
+#close-modal {
+  font-size: xx-large;
+  border: solid 0.25rem #451D0F;
 }
 
 

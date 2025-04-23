@@ -125,6 +125,7 @@ const validateForm = (event) => {
   // If no errors, call addParticipant() and clear fields
   if (containsErrors == false) {
     addParticipant(person, event);
+    toggleModal(person);
     for (let i = 0; i < rsvpInputs.length; i++){
       rsvpInputs[i].classList.remove("error");
       rsvpInputs[i].value = "";
@@ -137,11 +138,14 @@ submitButton.addEventListener("click", validateForm);
 
 
 
-/*** Animations [PLACEHOLDER] [ADDED IN UNIT 8] ***/
+/*** Animations ***/
 document.getElementById("joinBattle").onclick = function () {
     window.location.hash = "#rsvp";
 };
 
+document.getElementById("noticeBoard").onclick = function () {
+    window.location.hash = "#about";
+};
 
 /*** Modal ***
   
@@ -155,16 +159,22 @@ document.getElementById("joinBattle").onclick = function () {
 ***/
 
 const toggleModal = (person) => {
-    let modal = 0; // TODO
+    // Select the elements
+    let modal = document.getElementById("success-modal"); 
+    let modalContent = document.getElementById("modal-text");
     
-    // TODO: Update modal display to flex
-    
+    // Update modal display to flex
+    modal.style.display = "flex";
 
-    // TODO: Update modal text to personalized message
-
+    // Update modal text to personalized message
+    modalContent.innerHTML = `Dungeon run mission accepted! <br><br> Welcome to the party <span class="warning">${person.user.value}</span>! <br><br> Your class is: <span class="warning">${person.class.value}</span>! <br><br> Prepare your weapons, your armor, and your inventory for battle! <br><br> It will be a tough journey ahead into the Catacombs!`
 
     // Set modal timeout to 5 seconds
-    
+    setTimeout(()=>{modal.style.display = "none";}, 5000);
+
+    // Add custom button to exit out of the modal early
+    closeModalButton = document.getElementById("close-modal");
+    closeModalButton.addEventListener("click", ()=>{modal.style.display = "none";});
 }
 
 // TODO: animation variables and animateImage() function
