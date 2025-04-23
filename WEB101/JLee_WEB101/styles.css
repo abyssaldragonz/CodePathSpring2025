@@ -11,6 +11,7 @@ html {
     background-color: var(--bg-color);
 }
 
+
 /*** body ***
   
   Purpose:
@@ -38,6 +39,7 @@ body {
     padding: 50px;
     margin: 0;
 }
+
 
 /*** Text ***
   
@@ -119,6 +121,7 @@ button:hover {
   background-color: silver;
 }
 
+
 /*** header ***
   
   Purpose:
@@ -145,7 +148,31 @@ button:hover {
 #header-img {
   width: 100px;
   height: 100px;
+  animation: myAnim 2s steps(1, end) 0s infinite normal forwards;
 }
+
+@keyframes myAnim {
+  0% {
+    transform: rotate(-10deg);
+  }
+
+  25% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  75% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
 
 /*** footer ***
   
@@ -168,6 +195,7 @@ button:hover {
     right: 0;
     margin-left: -50px; /* To ignore the body's marign and make it stuck in a fixed position */
 }
+
 
 /*** Navigation bar (navbar) ***
   
@@ -210,6 +238,11 @@ button:hover {
   color: white;
   text-decoration: underline;
 }
+
+#navbar-img {
+  animation: myAnim 2s steps(2, end) 0s infinite reverse forwards;
+}
+
 
 /*** About Section ***
   
@@ -298,7 +331,8 @@ button:hover {
   background-color: var(--error-color);
 }
 
-/*** Animations [PLACEHOLDER] [ADDED IN UNIT 8] ***/
+
+/*** Animations ***/
 
 /*** Success Modal  ***
   
@@ -364,6 +398,11 @@ button:hover {
   border: solid 0.25rem #451D0F;
 }
 
+#reduce-motion-button:hover {
+  background-color: #684fb5;
+  color: cyan;
+  font-weight: 700;
+}
 
 /* Default dark mode style */
 .dark-mode {
@@ -397,6 +436,11 @@ button:hover {
 .dark-mode a:visited * {
   color: #684fb5;
   text-shadow: 2px 2px black;
+}
+
+.dark-mode .navbar * {
+  color:navy;
+  text-shadow: 2px 2px cornflowerblue;
 }
 
 #theme-button {

@@ -1,5 +1,3 @@
-<!-- working locally on vscode and pushing to github (https://github.com/abyssaldragonz/CodePathSpring2025) ! -->
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -35,14 +33,16 @@
         -->
         <div class="navbar" id="navbar">
             <ul>
-                <li><img height=75 src="https://wiki.hypixel.net/images/0/06/SkyBlock_items_dungeon_stone.png" /></li>
+                <li><img id="navbar-img" height=75 src="https://wiki.hypixel.net/images/0/06/SkyBlock_items_dungeon_stone.png" /></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#schedule">Schedule</a></li>
                 <li><a href="#links">Links</a></li>
-                <li><button id="theme-button">TOGGLE DARK MODE</button></li>
+                <li><button class="button-theme" id="theme-button">TOGGLE DARK MODE</button></li>
+                <li><button id="reduce-motion-button">REDUCE MOTION</button></li>
             </ul>
         </div>
         
+
         <!-- headings
 
         Purpose:
@@ -67,6 +67,7 @@
             </div>
         </div>
         
+
         <!-- about
 
         Purpose:
@@ -90,7 +91,6 @@
                 <img height="100" src="https://wiki.hypixel.net/images/b/b9/SkyBlock_furniture_dungeon_wood_reward_chest.png" />
             </li>
                 <hr />
-                
             <li  class="listItem-container"> 
                 <b>Level 5-25 Dungeons:</b> <i>Amateur dungeons</i>
                 <img height="100" src="https://wiki.hypixel.net/images/8/85/SkyBlock_furniture_dungeon_gold_reward_chest.png" />
@@ -114,9 +114,11 @@
         </ul>
         
         <br /> 
-        <p> Want to learn more? View a trailer here!</p>
-        <iframe src="https://www.youtube.com/embed/WL8_PJTOK1I" title="Hypixel Skyblock: Anime Opening Remastered" allowfullscreen> </iframe> <!-- this embed will NOT work in local !!!!  -->
-        
+        <p> Want to learn more? View a trailer here!</p> 
+        <div style="display: flex; justify-content: center; left: 0; right: 0">
+            <iframe style="width: 75vw !important; height: calc(75vw*0.56) !important" src="https://www.youtube.com/embed/WL8_PJTOK1I" title="Hypixel Skyblock: Anime Opening Remastered" allowfullscreen> </iframe> <!-- this embed will NOT work in local !!!!  -->
+        </div>
+
         <!-- schedule
 
         Purpose:
@@ -187,8 +189,8 @@
                 <div class="rsvp-participants">
                     <p><img alt="Technoblade" height="35" src="https://cravatar.eu/helmhead/technoblade/600.png"> Technoblade (berserk) has joined the party!</p>
                     <p><img alt="im_a_squid_kid" height="35" src="https://cravatar.eu/helmhead/im_a_squid_kid/600.png"> Squid Kid (mage) has joined the party!</p>
-                    <p><img alt="HaxR256" height="35" src="https://cravatar.eu/helmhead/HaxR256/600.png"> HaxR (tank) has joined the party!</p>
-                    <p><img alt="Powliner" height="35" src="https://cravatar.eu/helmhead/Powliner/600.png"> Powliner (healer) has joined the party!</p>
+                    <p><img alt="HaxR256" height="35" src="https://cravatar.eu/helmhead/HaxR256/600.png"> HaxR (healer) has joined the party!</p>
+                    <p><img alt="Powliner" height="35" src="https://cravatar.eu/helmhead/Powliner/600.png"> Powliner (tank) has joined the party!</p>
                     <p><img alt="Jules" height="35" src="https://cravatar.eu/helmhead/Jules/600.png"> Jules (archer) has joined the party!</p>
                 </div>
             </div>
@@ -198,19 +200,20 @@
                 <form id="rsvp-form" title="rsvp-form">
                     <!-- form inputs go here -->
                     <label>Username:</label>
-                    <input id="user" placeholder="Enter your username">
+                    <input type="text" id="user" placeholder="Enter your username" required>
                     <label>Class:</label>
-                    <input id="class" placeholder="Enter your main class">
+                    <input type="text" id="class" placeholder="Enter your main class" required>
                     <label>Level:</label>
-                    <input type="number" id="level" placeholder="Enter your level">
+                    <input type="number" id="level" placeholder="Enter your level" required>
                     <br />
                     <label>Contact:</label>
-                    <input id="contact" style="width: 20rem" placeholder="Enter your Abiphone contact (example@abiphone.net)">
+                    <input type="email" id="contact" style="width: 25rem" placeholder="Enter your Abiphone contact (example@abiphone.net)" required>
                 </form>
                 <!-- Submit button -->
                 <button id="rsvp-button">Submit RSVP</button>
             </div>
         </div>
+
 
         <!-- success modal
         
@@ -232,10 +235,9 @@
                     <button id="close-modal">CLOSE!</button>
                 </div>
                 <div id="modal-item">
-                    <img style="height:auto" src="https://wiki.hypixel.net/images/4/4b/SkyBlock_npcs_adventurer_saul.png" />
+                    <img id="modal-image" style="height:auto" src="https://wiki.hypixel.net/images/4/4b/SkyBlock_npcs_adventurer_saul.png" />
                 </div>
             </div>
-            
         </div>
 
 
@@ -272,6 +274,7 @@
                 <p>Enjoy dark soul games? Baldur's Gate is the perfect match</p>
             </article>
         </a>
+
             
         <!-- footer -->
         <footer class="footer">
@@ -283,7 +286,5 @@
 
         <!-- script -->
         <script src="index.js"></script>
-
-        <div id="header-img"></div>
     </body>
 </html>
