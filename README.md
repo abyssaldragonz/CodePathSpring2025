@@ -22,6 +22,7 @@ Projects and Activities for CodePath courses Spring 2025. Specifically for cours
 * `./TIP102` folder holds any session activities and projects done for TIP102. <br>
 * `./WEB101` folder holds the course project done for WEB101 <br>
     * View the website created for WEB101 [here](https://abyssaldragonz.github.io/CodePathSpring2025/WEB101/JLee_WEB101/)
+    * [Figma Design](https://www.figma.com/design/fLiQFy1HbUVxjdHntRSNXq/Untitled?node-id=1-41&t=g18OGmASFytNAXq9-1)
     * Contains HTML, CSS, and JavaScript files for the website
 <br>
 
