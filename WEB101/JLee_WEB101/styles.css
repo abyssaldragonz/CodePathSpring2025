@@ -11,6 +11,11 @@ html {
     background-color: var(--bg-color);
 }
 
+@font-face {
+  font-family: 'Minecraft';
+  src: url(./img/Minecraft.otf);
+}
+
 
 /*** body ***
   
